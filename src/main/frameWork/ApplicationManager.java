@@ -63,4 +63,5 @@ public class ApplicationManager {
         }
         return autoItHelper;
     }
+
 }
