@@ -9,6 +9,7 @@ public class ApplicationManager {
     private ContactHelper contactHelper;
     private ProcessHelper processHelper;
     private static ApplicationManager singleton;
+    private AutoItHelper autoItHelper;
 
 
     public static ApplicationManager getInstance(Properties properties) throws IOException {
@@ -53,5 +54,13 @@ public class ApplicationManager {
 
         }
             return contactHelper;
+    }
+    public AutoItHelper getAutoItHelper() {
+
+        if(autoItHelper == null){
+            autoItHelper = new AutoItHelper(this);
+
+        }
+        return autoItHelper;
     }
 }
